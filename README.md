@@ -1,201 +1,244 @@
-# Awesome-Container-Runtimes
+# 📦 Awesome Container Runtimes 🚀
 
-## Top Container Runtimes Ecosystem
+<div align="center">
 
+<img src="./assets/banner.svg" alt="Awesome Container Runtimes Banner" width="100%" />
 
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Container-Runtimes/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Container-Runtimes?style=social&color=white" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Container-Runtimes/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Container-Runtimes?style=social&color=white" alt="GitHub Forks" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Container-Runtimes/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=flat-square" alt="License" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
+**A curated collection of production-grade Container Runtimes, OCI implementations, MicroVM hypervisors, sandboxed kernels, and Kubernetes CRI engines.**
 
-*Focused on Container Execution, Isolation & OCI Standards*  
+*Last updated: October 2026*
 
-**Last updated: October 2026**
+</div>
 
+---
 
+## 📑 Table of Contents
 
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Container Runtimes**. These tools enable organizations to execute containers on hosts and clusters—from the standard `runc` to sandboxed runtimes that provide hardware-level isolation for untrusted workloads, and from the Docker daemon to daemonless alternatives that improve security posture.
+- [🌐 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [☁️ SaaS / Hosted Platforms](#️-saas--hosted-platforms)
+- [⚡ Open-Source GitHub Projects](#-open-source-github-projects)
+  - [Ranked by GitHub Stars](#ranked-by-github-stars)
+- [🛠️ Architectural Taxonomy & Isolation Matrix](#️-architectural-taxonomy--isolation-matrix)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Community](#-support--community)
+- [📈 Star History](#-star-history)
+- [⚖️ Disclaimer](#️-disclaimer)
 
+---
 
+## 🌐 Sector Overview & Market Dynamics
 
-**Examples** include containerd, CRI-O, Podman, Docker Engine, runc, Kata Containers, gVisor, Firecracker, Youki, and crun (the category leaders).
+The global containerization software and runtime ecosystem is estimated at approximately **$9.67 billion to $11.05 billion (2025–2026)**, expanding at a compound annual growth rate (CAGR) of ~17%. The market exhibits a distinct dual structure:
 
+- **Core Low-Level Runtimes (Highly Concentrated / Winner-Take-All)**: Standardized strictly around CNCF and Open Container Initiative (OCI) specifications. Projects like `runc`, `containerd`, and `CRI-O` command nearly universal adoption in production Kubernetes clusters and container clouds.
+- **Enterprise Platforms & Developer Ecosystems (Moderately Fragmented)**: Highly competitive across hyperscalers (Google GKE, Microsoft AKS, AWS EKS) and enterprise developer tooling (Docker, Red Hat Podman/OpenShift), with accelerating innovation in hardware-isolated microVMs (`Firecracker`, `Kata Containers`) and user-space sandboxes (`gVisor`) driven by untrusted multi-tenancy and AI/ML model execution security.
 
+---
 
-**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, container isolation, and open runtime infrastructure—ideal for platform engineers, security teams, and organizations seeking transparent, vendor-independent container execution.
+## ☁️ SaaS / Hosted Platforms
 
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
-## Sector Overview & Market Dynamics
-
-The global containerization software and runtime ecosystem is estimated at approximately **$9.67 billion to $11.05 billion (2025–2026)**, expanding at a CAGR of ~17%. The market dynamics exhibit a dual structure: the foundational low-level runtime layer is **highly concentrated and standardized** around CNCF/OCI specifications (`containerd`, `CRI-O`, `runc`), while the broader managed platform, developer tooling, and specialized runtime security tiers are **moderately fragmented**, contested by hyper-scale cloud providers and specialized enterprise tooling vendors.
-
-## SaaS/Hosted Platforms
-
-| Platform | Provider / Company | Company Size (Valuation / Revenue) | Description | Starting Tier Pricing | Free Tier / Trial Limits |
+| 🚀 Platform | 🏢 Provider / Company | 💰 Company Size (Valuation / Revenue) | 📝 Description | 🏷️ Starting Tier Pricing | 🎁 Free Tier / Trial Limits |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Google Kubernetes Engine (GKE)** | Alphabet Inc. (Google) | ~$4.22 Trillion Market Cap / $350B+ Revenue | Managed Kubernetes platform shipping **containerd** by default, with native **gVisor (GKE Sandbox)** support. | $0.10/cluster/hour (~$74.40/month) for cluster management | $74.40/month billing credit covering 1 Zonal or Autopilot cluster indefinitely (compute/storage extra); plus $300 new-account credit (90-day trial). |
 | **Azure Kubernetes Service (AKS)** | Microsoft Corporation | ~$4.01 Trillion Market Cap / $245B+ Revenue | Enterprise managed Kubernetes service utilizing **containerd** as standard node runtime. | $0.10/cluster/hour (~$73.00/month) for Standard Tier with financially-backed 99.95% SLA | Free Tier with $0/hour cluster management fee forever (limited to non-SLA, up to 1,000 nodes; compute/storage billed separately); plus $200 Azure credit (30-day trial). |
 | **Amazon Elastic Kubernetes Service (Amazon EKS)** | Amazon.com, Inc. (AWS) | ~$2.75 Trillion Market Cap / $620B+ Revenue | Scalable managed Kubernetes control plane deploying **containerd** across EC2 and AWS Fargate workers. | $0.10/cluster/hour (~$73.00/month) for standard Kubernetes version support | No ongoing free tier credit for control plane management ($0.10/hr billed from creation); 12-month AWS Free Tier covers compute (750 hours/mo t2.micro/t3.micro), plus $300 AWS credits for eligible accounts. |
 | **Docker Desktop** | Docker, Inc. | $2.1 Billion Valuation / ~$207M ARR | Desktop GUI and container environment (Docker Engine, Compose, Kubernetes) for macOS, Windows, and Linux. | $9.00/user/month (Pro plan billed annually) or $11.00/user/month billed monthly | Docker Personal tier is free forever for personal use, education, open source, or businesses with <250 employees AND <$10M gross annual revenue; 30-day free trial on paid commercial tiers. |
 
+---
 
+## ⚡ Open-Source GitHub Projects
 
+### Ranked by GitHub Stars
 
-## Open-Source GitHub Projects
+All open-source container runtime repositories are sorted in descending order by GitHub stars. Star badges dynamically link to each repository's stargazers.
 
+- **[Docker Engine (Moby)](https://github.com/moby/moby)** [![GitHub stars](https://img.shields.io/github/stars/moby/moby?style=social&color=white)](https://github.com/moby/moby/stargazers)  
+  🐳 **The foundational container engine that launched modern containerization** (Apache-2.0)  
+  Developer-favorite runtime featuring the industry-standard CLI, Dockerfile ecosystem, and Docker Compose tooling. Utilizes a multi-layer execution chain (`dockerd → containerd → containerd-shim → runc`). Ideal for workstation workflows, local CI/CD pipelines, and application building.
 
+- **[Firecracker](https://github.com/firecracker-microvm/firecracker)** [![GitHub stars](https://img.shields.io/github/stars/firecracker-microvm/firecracker?style=social&color=white)](https://github.com/firecracker-microvm/firecracker/stargazers)  
+  🔥 **Secure and fast microVMs for serverless computing** (Apache-2.0)  
+  AWS's open-source minimalist virtual machine monitor written in Rust. Powers AWS Lambda and AWS Fargate, launching lightweight Linux microVMs in ~5ms with <5 MiB memory overhead. Replaces heavyweight QEMU device emulation with a stripped-down virtio interface for extreme density and security.
 
-- **[containerd](https://github.com/containerd/containerd)**  
+- **[Podman](https://github.com/containers/podman)** [![GitHub stars](https://img.shields.io/github/stars/containers/podman?style=social&color=white)](https://github.com/containers/podman/stargazers)  
+  🦭 **Daemonless and rootless container and pod manager** (Apache-2.0)  
+  Eliminates the single point of failure and security exposure of centralized daemon sockets (`/var/run/docker.sock`). Runs containers via direct fork-exec using Linux user namespaces. Native support for Kubernetes Pod syntax (`podman generate kube` and `podman play kube`), full Docker CLI aliasing, and 15–20% lower memory footprint.
 
-  **An open and reliable container runtime** (Apache-2.0) . **The industry-standard high-level runtime**—**CNCF Graduated project** donated by Docker in 2017 . **The default runtime in GKE, EKS, AKS, and most on-premises Kubernetes distributions** . **Architecture**: **shim API** provides stable interfaces with each container getting its own shim process—**if containerd daemon restarts, running containers continue uninterrupted** . **Features**: **image management**, **snapshots for layer storage**, **plugin system**, **NRI (Node Resource Interface) 2.0** for dynamic GPU/CPU pinning, **Sandbox API** for Kata/gVisor integration, and **runwasi shim** for WebAssembly modules . **v2.0 GA** (September 2024) adds **Image Transfer Service** for simplified pull/push retries and progress monitoring . **Latest v2.3.5** (September 2026) includes security updates (CVE-2026-53495) and hardening for stripping sensitive authentication data during image distribution . **The reference implementation for Kubernetes container runtime**.
+- **[Colima](https://github.com/abiosoft/colima)** [![GitHub stars](https://img.shields.io/github/stars/abiosoft/colima?style=social&color=white)](https://github.com/abiosoft/colima/stargazers)  
+  🍏 **Container runtimes on macOS (and Linux) with minimal setup** (MIT)  
+  Ultra-fast Docker Desktop replacement powered by Lima. Provides seamless macOS virtualization with Docker CLI, containerd, and Kubernetes integration, complete with port forwarding and volume mounts.
 
+- **[Lima](https://github.com/lima-vm/lima)** [![GitHub stars](https://img.shields.io/github/stars/lima-vm/lima?style=social&color=white)](https://github.com/lima-vm/lima/stargazers)  
+  🐧 **Linux virtual machines on macOS with automatic file sharing and port forwarding** (Apache-2.0)  
+  The de facto macOS VM layer for cloud-native engineers, enabling containerd, nerdctl, and Docker to run smoothly on Apple Silicon and Intel Macs with native VirtioFS acceleration.
 
+- **[containerd](https://github.com/containerd/containerd)** [![GitHub stars](https://img.shields.io/github/stars/containerd/containerd?style=social&color=white)](https://github.com/containerd/containerd/stargazers)  
+  ☸️ **The industry-standard container runtime core** (Apache-2.0, CNCF Graduated)  
+  The default runtime powering GKE, EKS, AKS, and enterprise Kubernetes worldwide. Architected around decoupled shim processes that keep containers running uninterrupted even through daemon restarts. Features NRI (Node Resource Interface) 2.0 for dynamic GPU/CPU scheduling, pluggable snapshotters, Sandbox API for microVM isolation, and runwasi integration.
 
-- **[CRI-O](https://github.com/cri-o/cri-o)**  
+- **[gVisor](https://github.com/google/gvisor)** [![GitHub stars](https://img.shields.io/github/stars/google/gvisor?style=social&color=white)](https://github.com/google/gvisor/stargazers)  
+  🛡️ **Application kernel and syscall-interception sandbox for containers** (Apache-2.0)  
+  Google's user-space kernel (Sentry) written in Go that acts as a secure boundary between untrusted containers and the Linux host kernel. Intercepts and executes syscalls in user space to eliminate kernel-level container escapes. Native Kubernetes integration via RuntimeClass (`runsc`), with zero hypervisor hardware requirements.
 
-  **OCI-based implementation of Kubernetes Container Runtime Interface** (Apache-2.0) . **The Kubernetes-only lightweight runtime**—**designed by Red Hat specifically for Kubernetes CRI, nothing else** . **Positioned differently from containerd**: containerd targets both Docker and Kubernetes; **CRI-O focuses exclusively on Kubernetes** . **Release cadence**: **1:1 matching with Kubernetes minor versions**—K8s 1.31 → CRI-O 1.31 . **Resource efficiency**: **~50 MB memory overhead per node** vs. containerd's ~100 MB, **50-100ms container start time** vs. containerd's 100-200ms . **The default runtime for OpenShift 4.16+** . **2026 additions**: **stream isolation** for logs/exec (separates from OOM cascade), **userns auto-mode** for rootless UID mapping, and **WebAssembly runtime class support** . **Latest v1.36.5** (September 2026) is a patch release addressing bug fixes and regressions . **The reference implementation for Kubernetes-only minimal runtime**.
+- **[runc](https://github.com/opencontainers/runc)** [![GitHub stars](https://img.shields.io/github/stars/opencontainers/runc?style=social&color=white)](https://github.com/opencontainers/runc/stargazers)  
+  ⚙️ **CLI tool for spawning and running containers according to the OCI specification** (Apache-2.0)  
+  The universal, OCI-compliant low-level runtime written in Go. Directly interfaces with Linux cgroups, namespaces, and seccomp profiles. Serves as the bedrock execution engine inside containerd, CRI-O, Docker, and Podman.
 
+- **[Skopeo](https://github.com/containers/skopeo)** [![GitHub stars](https://img.shields.io/github/stars/containers/skopeo?style=social&color=white)](https://github.com/containers/skopeo/stargazers)  
+  🔭 **Work with remote container images and registry repositories** (Apache-2.0)  
+  Utility that inspects, copies, signs, and syncs container images across registries and local storage without requiring root privileges or running container engines.
 
+- **[WasmEdge](https://github.com/WasmEdge/WasmEdge)** [![GitHub stars](https://img.shields.io/github/stars/WasmEdge/WasmEdge?style=social&color=white)](https://github.com/WasmEdge/WasmEdge/stargazers)  
+  🕸️ **High-performance, lightweight WebAssembly runtime for cloud-native and edge** (Apache-2.0, CNCF Sandbox)  
+  OCI-compliant Wasm runtime designed to execute side-by-side with Linux containers via `crun` and `runwasi`. Delivers sub-millisecond cold starts and tiny footprints ideal for serverless, edge AI inference, and plugin architectures.
 
-- **[Podman](https://github.com/containers/podman)**  
+- **[nerdctl](https://github.com/containerd/nerdctl)** [![GitHub stars](https://img.shields.io/github/stars/containerd/nerdctl?style=social&color=white)](https://github.com/containerd/nerdctl/stargazers)  
+  🤓 **Docker-compatible CLI for containerd** (Apache-2.0)  
+  Full-featured CLI client for containerd with identical syntax to Docker, adding cutting-edge features: rootless mode, lazy pulling (eStargz, Nydus), OCIcrypt encryption, and IPFS image distribution.
 
-  **A tool for managing OCI containers and pods** (Apache-2.0) . **The daemonless, rootless Docker alternative**—**`podman run` uses fork-exec; no daemon means no single point of failure** . **Key differentiators**: **rootless by default** (user namespaces + slirp4netns + fuse-overlayfs), **Pod concept** for grouping containers with shared IP/volumes, **Docker CLI compatibility** (`alias docker=podman` works for most workflows), and **`podman generate kube`** to export running pods as Kubernetes YAML . **Security advantage**: **eliminates the privileged Docker socket** (`/var/run/docker.sock`)—anything with access can spawn containers or escalate privileges . **Podman's rootless model limits compromise to user permissions, not root-level system access** . **Performance**: **15-20% lower memory per container** than Docker, **0.7-1.1s container startup** vs. Docker's 1.0-1.6s . **Ecosystem**: **Buildah** (building), **Skopeo** (image inspection/copy)—the Red Hat trio . **Latest v6.1.1** (September 2026) addresses CVE-2026-17106 (tar archive path traversal) and fixes rootlessport IPv4/IPv6 bind behavior . **The reference implementation for daemonless rootless containers**.
+- **[Buildah](https://github.com/containers/buildah)** [![GitHub stars](https://img.shields.io/github/stars/containers/buildah?style=social&color=white)](https://github.com/containers/buildah/stargazers)  
+  🏗️ **A tool that facilitates building OCI container images without a daemon** (Apache-2.0)  
+  Builds standard OCI and Docker images rootlessly from scratch, standard shell scripts, or Dockerfiles without running background daemons or socket privileges.
 
+- **[Bubblewrap](https://github.com/containers/bubblewrap)** [![GitHub stars](https://img.shields.io/github/stars/containers/bubblewrap?style=social&color=white)](https://github.com/containers/bubblewrap/stargazers)  
+  🫧 **Unprivileged sandboxing tool for Linux containers and desktop isolation** (LGPL-2.0)  
+  Low-level setuid implementation for creating unprivileged Linux namespaces and sandboxes, used as the containerization engine powering Flatpak.
 
+- **[Kata Containers](https://github.com/kata-containers/kata-containers)** [![GitHub stars](https://img.shields.io/github/stars/kata-containers/kata-containers?style=social&color=white)](https://github.com/kata-containers/kata-containers/stargazers)  
+  🔲 **Hardware-enforced VM-level isolation for containers** (Apache-2.0, OpenInfra Foundation)  
+  Spawns lightweight virtual machines (via QEMU, Cloud Hypervisor, or Firecracker) for each container or pod, guaranteeing dedicated guest kernels. Delivers true multi-tenant security, PCI-DSS/FedRAMP isolation, and Confidential Containers support (Intel TDX, AMD SEV-SNP).
 
-- **[Docker Engine (Moby)](https://github.com/moby/moby)**  
+- **[Youki](https://github.com/containers/youki)** [![GitHub stars](https://img.shields.io/github/stars/containers/youki?style=social&color=white)](https://github.com/containers/youki/stargazers)  
+  🦀 **A fast, memory-safe OCI container runtime written in Rust** (Apache-2.0)  
+  Drop-in replacement for runc written in pure Rust. Achieves sub-300ms container cold starts with rigorous memory-safety guarantees, tailored for high-throughput FaaS environments and embedded Linux.
 
-  **The container engine that started it all** (Apache-2.0) . **The developer-favorite runtime**—**largest ecosystem (Docker Hub, Compose, extensions), industry-standard CLI, and polished desktop GUI** . **Architecture**: **5-layer call chain** (`docker run → dockerd → containerd → containerd-shim → runc`) vs. containerd's 4 layers . **Performance trade-off**: **~200 MB memory overhead per node** and **200-400ms container start time**—the extra dockerd layer adds latency . **Security concern**: **root-owned daemon and privileged socket widen attack surface**—compromised CI/CD jobs are a common vector . **When to use**: **development environments**, **Docker Compose workflows**, **Windows/macOS native experience** . **When to avoid**: **Kubernetes production nodes**—dockershim was removed in Kubernetes 1.24 . **The reference implementation for developer container workflows**.
+- **[Cloud Hypervisor](https://github.com/cloud-hypervisor/cloud-hypervisor)** [![GitHub stars](https://img.shields.io/github/stars/cloud-hypervisor/cloud-hypervisor?style=social&color=white)](https://github.com/cloud-hypervisor/cloud-hypervisor/stargazers)  
+  ☁️ **Open source Virtual Machine Monitor (VMM) in Rust** (Apache-2.0)  
+  Modern hypervisor focusing exclusively on cloud workloads and container isolation backends (backed by Intel and the Linux Foundation) built on rust-vmm components.
 
+- **[CRI-O](https://github.com/cri-o/cri-o)** [![GitHub stars](https://img.shields.io/github/stars/cri-o/cri-o?style=social&color=white)](https://github.com/cri-o/cri-o/stargazers)  
+  🎯 **Lightweight, Kubernetes-dedicated Container Runtime Interface** (Apache-2.0, CNCF Graduated)  
+  Engineered exclusively for Kubernetes CRI without legacy Docker overhead. The default runtime for Red Hat OpenShift, synchronized 1:1 with upstream Kubernetes releases. Consumes ~50 MB memory overhead per node with sub-100ms startup latencies.
 
+- **[crun](https://github.com/containers/crun)** [![GitHub stars](https://img.shields.io/github/stars/containers/crun?style=social&color=white)](https://github.com/containers/crun/stargazers)  
+  🏎️ **Ultra-fast, lightweight OCI runtime written in C** (GPL-2.0)  
+  High-performance alternative to runc with ultra-low memory footprint (~2 MB) and instant execution. The default low-level runtime for Podman and modern CRI-O distributions, featuring built-in WebAssembly engine dispatching.
 
-- **[runc](https://github.com/opencontainers/runc)**  
+- **[OCI Image Specification](https://github.com/opencontainers/image-spec)** [![GitHub stars](https://img.shields.io/github/stars/opencontainers/image-spec?style=social&color=white)](https://github.com/opencontainers/image-spec/stargazers)  
+  📄 **The official OCI Image Format Specification** (Apache-2.0)  
+  Defines the vendor-neutral specifications for layered container filesystem serialization, manifests, config descriptors, and cryptographic index schemas.
 
-  **CLI tool for spawning and running containers according to the OCI specification** (Apache-2.0) . **The universal low-level runtime**—**the default OCI runtime for Docker, containerd, CRI-O, and Podman** . **Written in Go**, implements the **OCI Runtime Specification**. **The reference implementation for OCI container execution**.
+- **[OCI Runtime Specification](https://github.com/opencontainers/runtime-spec)** [![GitHub stars](https://img.shields.io/github/stars/opencontainers/runtime-spec?style=social&color=white)](https://github.com/opencontainers/runtime-spec/stargazers)  
+  📜 **The official OCI Container Runtime Specification** (Apache-2.0)  
+  Standardizes container lifecycle hooks, configuration schemas (`config.json`), execution environments, and syscall restrictions across low-level engines.
 
+- **[crictl (CRI Tools)](https://github.com/kubernetes-sigs/cri-tools)** [![GitHub stars](https://img.shields.io/github/stars/kubernetes-sigs/cri-tools?style=social&color=white)](https://github.com/kubernetes-sigs/cri-tools/stargazers)  
+  🔧 **CLI and validation test suite for Kubelet CRI runtimes** (Apache-2.0)  
+  Standard debugging and operational CLI for inspecting pods, sandboxes, and images directly across CRI runtimes without going through the Kubernetes API server.
 
+- **[runwasi](https://github.com/containerd/runwasi)** [![GitHub stars](https://img.shields.io/github/stars/containerd/runwasi?style=social&color=white)](https://github.com/containerd/runwasi/stargazers)  
+  🧩 **WebAssembly containerd shims** (Apache-2.0)  
+  CNCF project providing shims for containerd to run Wasm modules natively through Wasmtime, WasmEdge, and Spin alongside Linux containers.
 
-- **[crun](https://github.com/containers/crun)**  
+- **[Uservm / Rootless Containers (Usernetes)](https://github.com/rootless-containers/usernetes)** [![GitHub stars](https://img.shields.io/github/stars/rootless-containers/usernetes?style=social&color=white)](https://github.com/rootless-containers/usernetes/stargazers)  
+  🛡️ **Kubernetes multi-node cluster running entirely under unprivileged user namespaces** (Apache-2.0)  
+  Proves total rootless isolation by deploying Kubernetes CRI runtimes and control planes without root privileges.
 
-  **A fast and lightweight OCI runtime written in C** (GPL-2.0) . **The performance-focused runc alternative**—**written in C for better performance than Go-based runc** . **The default OCI runtime for CRI-O 1.31 and Podman 5** . **Wasm support**: **crun 1.20+ can launch WasmEdge/Wasmtime directly via WebAssembly handler** . **The reference implementation for C-based OCI runtime**.
-
-
-
-- **[Youki](https://github.com/containers/youki)**  
-
-  **A container runtime written in Rust** (Apache-2.0) . **The memory-safe runc alternative**—**gaining traction as a lower-overhead drop-in replacement for runc, particularly in latency-sensitive environments** . **Performance**: **~290 ms cold start** for a Node.js image vs. containerd's 380 ms and CRI-O's 395 ms—**meaningful for FaaS-style workloads launching thousands of containers per minute** . **The emerging standard for Rust-based OCI runtime**.
-
-
-
-- **[Kata Containers](https://github.com/kata-containers/kata-containers)**  
-
-  **Open source container runtime with VM-level isolation** (Apache-2.0) . **The hardware-enforced isolation runtime**—**runs each container or pod inside a lightweight VM with its own kernel** . **Isolation**: **hypervisor boundary (KVM)**—same model that separates AWS EC2 instances . **Kernel exploit inside a Kata container compromises only that VM; host kernel is untouched** . **Performance**: **~150-300ms cold start**, **<10 MiB memory overhead + guest kernel**, **near-native CPU/IO performance** . **VMM flexibility**: supports **QEMU**, **Cloud Hypervisor**, and **Firecracker** as backends . **Confidential Containers**: **Kata 3.x ships with Intel TDX and AMD SEV-SNP support**—hardware-attested memory encryption where host operator cannot inspect container memory . **Kubernetes integration**: **native via CRI RuntimeClass**—install Kata, create RuntimeClass, specify in pod spec . **Operational complexity**: **low**—Kata handles VMM provisioning, guest kernel, networking, and lifecycle . **Best for**: **production Kubernetes workloads requiring VM-level isolation**, **multi-tenant databases**, **PCI-DSS/HIPAA/FedRAMP compliance** where checklist literally says "VM-level isolation" . **The reference implementation for VM-isolated containers**.
-
-
-
-- **[gVisor](https://github.com/google/gvisor)**  
-
-  **Application Kernel for Containers** (Apache-2.0) . **The user-space kernel sandbox**—**implements a user-space kernel (Sentry) in Go that intercepts container syscalls before they reach the host kernel** . **How it works**: container process makes a syscall → hits Sentry (not host kernel) → Sentry handles it in user space → limited "gofer" calls to restricted host process for actual I/O . **Security model**: **even if attacker achieves code execution and triggers kernel exploit payload, payload hits Sentry—a much smaller, auditable codebase than full Linux kernel** . **Performance**: **milliseconds boot** (no VM), **10-30% I/O overhead** (syscall tax), **minimal CPU-bound impact** . **Systrap mode** is now default—nearly eliminates early performance cliff . **Limitations**: **does not implement every Linux syscall**—io_uring not supported, certain ioctl operations fail, no GPU direct access . **Kubernetes**: **RuntimeClass** (`runtimeClassName: gvisor`) . **GKE offers gVisor as first-class "GKE Sandbox"** . **On EKS**: requires DaemonSet to install runsc + containerd config update—**systrap platform works on standard EC2** (no bare metal needed unlike Kata) . **Best for**: **CI/CD runners executing arbitrary user pipelines** (GitHub Actions self-hosted, GitLab runners), **ML inference APIs where users submit model weights/custom code**, **SaaS plugin execution**, **cloud IDE backends** . **The reference implementation for syscall-interception sandboxing**.
-
-
-
-- **[Firecracker](https://github.com/firecracker-microvm/firecracker)**  
-
-  **Secure and fast microVMs for serverless computing** (Apache-2.0) . **AWS's microVM manager**—**built for Lambda and Fargate, used in billions of invocations per day** . **Architecture**: **stripped to absolute minimum**—no BIOS, no PCI bus, no USB, no legacy devices. Just **virtio network, virtio block, serial console** . **Codebase**: **~50,000 lines of Rust** vs. QEMU's ~2 million lines of C . **Performance**: **~100-200ms boot to userspace**, **<5 MiB memory overhead per microVM**, **up to 150 microVMs per second per host** . **Security**: **jailer process with seccomp, cgroup, namespace restrictions**—cannot access host filesystem, no hardware passthrough . **Device emulation attack surface**: **~30 surfaces vs. QEMU's hundreds** . **Operational challenge**: **Firecracker doesn't include orchestration**—requires building kernel image management, root filesystem, networking, jailer security, and VM lifecycle . **Most teams use Firecracker through Kata Containers rather than directly** . **Used by**: **AWS Lambda/Fargate**, **Fly.io Machines** (Firecracker fork core primitive) . **Best for**: **custom serverless platforms**, **high-density multi-tenant workloads** . **The reference implementation for serverless microVMs**.
-
-
-
-- **[Mirantis Container Runtime](https://docs.mirantis.com/mcr/)**  
-
-  **Enterprise container runtime** (commercial) . **The enterprise-hardened Docker Engine**—**incorporates all features and fixes from Moby versions 26 through 29** . **Key updates in MCR 29**: **containerd image store now production-ready and default** (multi-platform images, Wasm support, pluggable snapshotters), **IPv6 improvements** (ip6tables enabled by default, automatic ULA prefix assignment), **overlay network address usage statistics**, and **Swarm service memory control** . **Minimum API version increased to 1.40** (MCR 19.03) . **Platform support**: RHEL 8.10/9.6, Rocky 8.10, SLES 15 SP7, Ubuntu 22.04/24.04, Windows Server 2019/2022 Core . **The enterprise-hardened Docker alternative**.
-
-
-
-- **[Apple Containerization](https://github.com/apple/container)**  
-
-  **A tool for creating and running Linux containers using lightweight virtual machines on a Mac** (Swift) . **Apple's native container solution**—**runs containers directly on macOS without Docker Desktop's VM overhead** . **Architecture**: **Container CLI** → **Containerization** (container creation) → **Virtualization.framework** (hypervisor API) → **Hypervisor.framework** (low-level) . **Similar to WSL2**—launches lightweight VM per container to run Linux kernel on non-Linux host . **OCI-compliant**—Kali Linux images work . **Availability**: **public release for macOS Tahoe 26 and Sequoia 15** . **Limitations**: **known network issues on Sequoia 15** (containers may not get IP addresses) . **Note**: **Docker Desktop is aware but focused on Docker VMM backend**—Apple Container as Docker Desktop backend is not currently planned . **The reference implementation for native macOS containers**.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **[Lima](https://github.com/lima-vm/lima)** — Linux VMs on macOS with automatic file sharing and port forwarding (Apache-2.0) . **The most popular macOS VM manager** for container workloads .
-
-- **[Colima](https://github.com/abiosoft/colima)** — Container runtimes on macOS with minimal setup (MIT) . **The Lima-based Docker/containerd runtime** for macOS .
-
-- **[nerdctl](https://github.com/containerd/nerdctl)** — Docker-compatible CLI for containerd (Apache-2.0) . **The missing CLI for containerd**—provides Docker-like commands for standalone containerd .
-
-- **[crictl](https://github.com/kubernetes-sigs/cri-tools)** — CLI for CRI-compatible container runtimes (Apache-2.0) . **The standard CRI debugging tool** .
-
-- **[WasmEdge](https://github.com/WasmEdge/WasmEdge)** — Lightweight, high-performance, and extensible WebAssembly runtime (Apache-2.0) . **The CNCF WebAssembly runtime** for edge and container integration .
-
-- **[containerd-shim-wasmtime](https://github.com/containerd/runwasi)** — WebAssembly runtime for containerd (Apache-2.0) . **Runs Wasm modules as containers** via containerd's runwasi shim .
-
-- Community **n8n** workflows for container runtime monitoring and security alerting.
-
-
-
-**Frameworks for building custom systems**: Combine **containerd** or **CRI-O** for high-level Kubernetes runtime with **runc** or **crun** for low-level execution, **Kata Containers** for VM-isolated workloads, **gVisor** for syscall-intercepted sandboxes, and **Podman** for daemonless rootless development—creating a comprehensive container runtime stack.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Container runtimes handling production workloads must follow security best practices, implement appropriate isolation, and comply with applicable regulations.
-
-- **Open-source container runtimes are mature and production-ready.** containerd is the default in GKE, EKS, AKS, and most on-prem distributions . CRI-O is the Red Hat-aligned minimal alternative . Podman provides daemonless rootless containers . **These are genuine alternatives to Docker Engine**.
-
-- **The containerd vs. CRI-O choice depends on your ecosystem.** containerd for **broad ecosystem support, Docker compatibility, and embedded use cases** . CRI-O for **pure Kubernetes environments, Red Hat/OpenShift, and minimal attack surface** . **Both are production-grade**—containerd has **~100 MB memory overhead** vs. CRI-O's **~50 MB** .
-
-- **The isolation spectrum matters for security.** **runc/crun** share the host kernel—a kernel CVE is a container escape risk . **gVisor** intercepts syscalls in user space—reduces kernel attack surface but breaks some workloads (io_uring, certain ioctls) . **Kata Containers** runs each container in a VM with its own kernel—**hardware-enforced boundary** where a guest kernel exploit does not reach the host . **Choose based on your threat model**: first-party internal services rarely justify VM-level isolation; multi-tenant or user-supplied code workloads demand it .
-
-- **gVisor vs. Kata Containers is a complexity vs. security trade-off.** **Kata provides stronger security** (hypervisor escape is harder than Sentry bug) but **requires nested virtualization** on most clouds . **gVisor provides meaningful isolation improvement with lower operational complexity**—**systrap platform works on standard EC2** (no bare metal needed unlike Kata) . **gVisor's limitation**: does not implement every Linux syscall—**pip/apt install may fail for packages using unsupported syscalls** .
-
-- **Firecracker is the serverless foundation.** **~125ms cold start**, **<5 MiB memory per microVM**, **150 microVMs/second per host** . **But it includes no orchestration**—**most teams use it through Kata Containers rather than directly** . **Used by AWS Lambda, Fargate, and Fly.io Machines** .
-
-- Self-hosted open-source solutions require proper kernel compatibility (eBPF for some security tools, KVM for Kata/Firecracker), runtime configuration, and ongoing maintenance. **Container isolation is your security boundary**—choose runtime based on actual threat model, not feature lists.
-
-
+- **[containers/image](https://github.com/containers/image)** [![GitHub stars](https://img.shields.io/github/stars/containers/image?style=social&color=white)](https://github.com/containers/image/stargazers)  
+  🖼️ **Go library for transporting and converting container images** (Apache-2.0)  
+  The core image pulling, verifying, and signing library powering Podman, Skopeo, and CRI-O.
+
+- **[umoci](https://github.com/opencontainers/umoci)** [![GitHub stars](https://img.shields.io/github/stars/opencontainers/umoci?style=social&color=white)](https://github.com/opencontainers/umoci/stargazers)  
+  🔨 **Modifies Open Container Initiative (OCI) images as unprivileged user** (Apache-2.0)  
+  Tool for unpacking, modifying, and repacking compliant OCI images without requiring root permissions.
+
+- **[Netavark](https://github.com/containers/netavark)** [![GitHub stars](https://img.shields.io/github/stars/containers/netavark?style=social&color=white)](https://github.com/containers/netavark/stargazers)  
+  🌐 **Rust-based container network stack** (Apache-2.0)  
+  High-performance container networking stack configuration tool and CNI replacement for Podman and rootless environments.
+
+- **[containers/storage](https://github.com/containers/storage)** [![GitHub stars](https://img.shields.io/github/stars/containers/storage?style=social&color=white)](https://github.com/containers/storage/stargazers)  
+  💾 **Go library for managing local filesystem layers and overlay storage** (Apache-2.0)  
+  Shared storage backend for layered container graph drivers (overlay2, btrfs, vfs) utilized across the Podman/CRI-O stack.
+
+- **[conmon](https://github.com/containers/conmon)** [![GitHub stars](https://img.shields.io/github/stars/containers/conmon?style=social&color=white)](https://github.com/containers/conmon/stargazers)  
+  👀 **OCI container monitor written in C** (Apache-2.0)  
+  Lightweight monitor daemon tracking container exit statuses, TTY forwardings, and log streams for Podman and CRI-O.
 
 ---
 
+## 🛠️ Architectural Taxonomy & Isolation Matrix
 
+```
+                      +------------------------------------------+
+                      |         Developer & Management CLI       |
+                      |   Docker CLI  |  Podman  |  nerdctl      |
+                      +------------------------------------------+
+                                           |
+                      +------------------------------------------+
+                      |          High-Level CRI Runtimes         |
+                      |         containerd    |    CRI-O         |
+                      +------------------------------------------+
+                                           |
+               +---------------------------+---------------------------+
+               |                           |                           |
+      +------------------+       +-------------------+       +-------------------+
+      |   Standard OCI   |       |   Syscall Sandbox |       |   MicroVM / VM    |
+      |   runc / crun    |       |       gVisor      |       |  Kata / Firecracker|
+      +------------------+       +-------------------+       +-------------------+
+               |                           |                           |
+        (Shared Kernel)             (Emulated Kernel)          (Hardware Isolation)
+```
 
-**Made for platform engineers, security teams, and organizations building transparent container runtime solutions.**  
+| Runtime Type | Projects | Isolation Boundary | Startup Latency | Overhead | Primary Best Use Case |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Traditional OCI** | `runc`, `crun`, `youki` | Linux Namespaces + cgroups | ~50–150 ms | Minimal (<10 MB) | Standard trusted workloads, high density |
+| **User-Space Kernel** | `gVisor` (runsc) | Syscall Interception (Sentry) | ~100–250 ms | Low (~20 MB) | Untrusted user code, multi-tenant SaaS |
+| **MicroVM Hypervisor** | `Kata Containers`, `Firecracker` | KVM / Hardware Virtualization | ~120–300 ms | Moderate (~30 MB) | Regulatory multi-tenancy, AI models, FedRAMP |
+| **WebAssembly Engine**| `WasmEdge`, `runwasi` | Wasm Bytecode Sandbox | <5 ms | Ultra-low (<5 MB) | Edge computing, serverless plugins |
 
-Let's make Container Runtimes more open, data-driven, and secure.
+---
+
+## 🤝 How to Contribute
+
+Contributions are welcome! Please help keep this container runtime index comprehensive, factual, and up to date.
+
+1. 🍴 Fork the repository.
+2. 🌿 Create a descriptive feature branch (`git checkout -b add-runtime-entry`).
+3. ✏️ Add or update entries following the established format and alphabetical/category sorting.
+4. 🔍 Ensure all links, descriptions, and license tags are accurate.
+5. 🚀 Submit a Pull Request with a clear explanation of the addition.
+
+---
+
+## 💖 Support & Community
+
+If you find this curated ecosystem list helpful for your platform engineering, devops, or security infrastructure projects, please consider supporting the project:
+
+- ⭐ **Star this repository** to improve visibility and help other cloud-native developers find it.
+- 🍴 **Fork and share** the project with your platform engineering team and community.
+- 💬 **Join our community on [Discord](https://discord.gg/jc4xtF58Ve)** to discuss container security, runtimes, and cloud-native architecture.
+- ☕ **Sponsor & Buy a Coffee**: If you'd like to support continued maintenance and curation of open cloud-native tools, visit our **[GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007)**.
+
+*Thank you to all contributors, maintainers, and sponsors who make open-source container infrastructure thrive!*
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Container-Runtimes&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Container-Runtimes&type=date&legend=top-left)
+
+---
+
+## ⚖️ Disclaimer
+
+- This is a community-curated directory intended for research, educational, and platform engineering purposes. It is not an endorsement.
+- Container isolation acts as your foundational security boundary. Select runtimes based on your precise threat model (e.g., standard internal services vs. hostile user workloads requiring hypervisor-level isolation).
