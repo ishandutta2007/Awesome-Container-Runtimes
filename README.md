@@ -30,29 +30,25 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
 - [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
 - [Open-Source GitHub Projects](#open-source-github-projects)
-
 - [How to Contribute](#how-to-contribute)
-
 - [Disclaimer](#disclaimer)
 
+## Sector Overview & Market Dynamics
 
+The global containerization software and runtime ecosystem is estimated at approximately **$9.67 billion to $11.05 billion (2025–2026)**, expanding at a CAGR of ~17%. The market dynamics exhibit a dual structure: the foundational low-level runtime layer is **highly concentrated and standardized** around CNCF/OCI specifications (`containerd`, `CRI-O`, `runc`), while the broader managed platform, developer tooling, and specialized runtime security tiers are **moderately fragmented**, contested by hyper-scale cloud providers and specialized enterprise tooling vendors.
 
 ## SaaS/Hosted Platforms
 
+| Platform | Provider / Company | Company Size (Valuation / Revenue) | Description | Starting Tier Pricing | Free Tier / Trial Limits |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Google Kubernetes Engine (GKE)** | Alphabet Inc. (Google) | ~$4.22 Trillion Market Cap / $350B+ Revenue | Managed Kubernetes platform shipping **containerd** by default, with native **gVisor (GKE Sandbox)** support. | $0.10/cluster/hour (~$74.40/month) for cluster management | $74.40/month billing credit covering 1 Zonal or Autopilot cluster indefinitely (compute/storage extra); plus $300 new-account credit (90-day trial). |
+| **Azure Kubernetes Service (AKS)** | Microsoft Corporation | ~$4.01 Trillion Market Cap / $245B+ Revenue | Enterprise managed Kubernetes service utilizing **containerd** as standard node runtime. | $0.10/cluster/hour (~$73.00/month) for Standard Tier with financially-backed 99.95% SLA | Free Tier with $0/hour cluster management fee forever (limited to non-SLA, up to 1,000 nodes; compute/storage billed separately); plus $200 Azure credit (30-day trial). |
+| **Amazon Elastic Kubernetes Service (Amazon EKS)** | Amazon.com, Inc. (AWS) | ~$2.75 Trillion Market Cap / $620B+ Revenue | Scalable managed Kubernetes control plane deploying **containerd** across EC2 and AWS Fargate workers. | $0.10/cluster/hour (~$73.00/month) for standard Kubernetes version support | No ongoing free tier credit for control plane management ($0.10/hr billed from creation); 12-month AWS Free Tier covers compute (750 hours/mo t2.micro/t3.micro), plus $300 AWS credits for eligible accounts. |
+| **Docker Desktop** | Docker, Inc. | $2.1 Billion Valuation / ~$207M ARR | Desktop GUI and container environment (Docker Engine, Compose, Kubernetes) for macOS, Windows, and Linux. | $9.00/user/month (Pro plan billed annually) or $11.00/user/month billed monthly | Docker Personal tier is free forever for personal use, education, open source, or businesses with <250 employees AND <$10M gross annual revenue; 30-day free trial on paid commercial tiers. |
 
-
-- **Managed Kubernetes Runtime Defaults** (GKE, EKS, AKS)  
-
-  All major managed Kubernetes services ship **containerd as the default runtime** . GKE additionally offers **gVisor as a first-class sandbox option** via GKE Sandbox . These platforms abstract runtime choice but allow RuntimeClass configuration for sandboxed workloads.
-
-
-
-- **Docker Desktop**  
-
-  **Desktop container environment** for Mac, Windows, and Linux. Features **Docker Engine**, **Docker Compose**, and **Kubernetes integration**. **Note**: Commercial licensing required for larger organizations ($9-$24/user/month) .
 
 
 
