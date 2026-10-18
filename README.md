@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Container-Runtimes/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Container-Runtimes?style=social&color=white" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Container-Runtimes/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Container-Runtimes?style=social&color=white" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Container-Runtimes/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Container-Runtimes?style=social&color=white" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Container-Runtimes/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=flat-square" alt="License" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -26,7 +26,7 @@
 - [🌐 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
 - [☁️ SaaS / Hosted Platforms](#️-saas--hosted-platforms)
 - [⚡ Open-Source GitHub Projects](#-open-source-github-projects)
-  - [Ranked by GitHub Stars](#ranked-by-github-stars)
+  - [Ranked by GitHub_Stars](#ranked-by-github-stars)
 - [🛠️ Architectural Taxonomy & Isolation Matrix](#️-architectural-taxonomy--isolation-matrix)
 - [🤝 How to Contribute](#-how-to-contribute)
 - [💖 Support & Community](#-support--community)
@@ -57,119 +57,119 @@ The global containerization software and runtime ecosystem is estimated at appro
 
 ## ⚡ Open-Source GitHub Projects
 
-### Ranked by GitHub Stars
+### Ranked by GitHub_Stars
 
-All open-source container runtime repositories are sorted in descending order by GitHub stars. Star badges dynamically link to each repository's stargazers.
+All open-source container runtime repositories are sorted in descending order by GitHub_Stars. Stars_Badges dynamically link to each repository's stargazers.
 
-- **[Docker Engine (Moby)](https://github.com/moby/moby)** [![GitHub stars](https://img.shields.io/github/stars/moby/moby?style=social&color=white)](https://github.com/moby/moby/stargazers)  
+- **[Docker Engine (Moby)](https://github.com/moby/moby)** [![GitHub_Stars](https://img.shields.io/github/stars/moby/moby?style=social&color=white)](https://github.com/moby/moby/stargazers)  
   🐳 **The foundational container engine that launched modern containerization** (Apache-2.0)  
   Developer-favorite runtime featuring the industry-standard CLI, Dockerfile ecosystem, and Docker Compose tooling. Utilizes a multi-layer execution chain (`dockerd → containerd → containerd-shim → runc`). Ideal for workstation workflows, local CI/CD pipelines, and application building.
 
-- **[Firecracker](https://github.com/firecracker-microvm/firecracker)** [![GitHub stars](https://img.shields.io/github/stars/firecracker-microvm/firecracker?style=social&color=white)](https://github.com/firecracker-microvm/firecracker/stargazers)  
+- **[Firecracker](https://github.com/firecracker-microvm/firecracker)** [![GitHub_Stars](https://img.shields.io/github/stars/firecracker-microvm/firecracker?style=social&color=white)](https://github.com/firecracker-microvm/firecracker/stargazers)  
   🔥 **Secure and fast microVMs for serverless computing** (Apache-2.0)  
   AWS's open-source minimalist virtual machine monitor written in Rust. Powers AWS Lambda and AWS Fargate, launching lightweight Linux microVMs in ~5ms with <5 MiB memory overhead. Replaces heavyweight QEMU device emulation with a stripped-down virtio interface for extreme density and security.
 
-- **[Podman](https://github.com/containers/podman)** [![GitHub stars](https://img.shields.io/github/stars/containers/podman?style=social&color=white)](https://github.com/containers/podman/stargazers)  
+- **[Podman](https://github.com/containers/podman)** [![GitHub_Stars](https://img.shields.io/github/stars/containers/podman?style=social&color=white)](https://github.com/containers/podman/stargazers)  
   🦭 **Daemonless and rootless container and pod manager** (Apache-2.0)  
   Eliminates the single point of failure and security exposure of centralized daemon sockets (`/var/run/docker.sock`). Runs containers via direct fork-exec using Linux user namespaces. Native support for Kubernetes Pod syntax (`podman generate kube` and `podman play kube`), full Docker CLI aliasing, and 15–20% lower memory footprint.
 
-- **[Colima](https://github.com/abiosoft/colima)** [![GitHub stars](https://img.shields.io/github/stars/abiosoft/colima?style=social&color=white)](https://github.com/abiosoft/colima/stargazers)  
+- **[Colima](https://github.com/abiosoft/colima)** [![GitHub_Stars](https://img.shields.io/github/stars/abiosoft/colima?style=social&color=white)](https://github.com/abiosoft/colima/stargazers)  
   🍏 **Container runtimes on macOS (and Linux) with minimal setup** (MIT)  
   Ultra-fast Docker Desktop replacement powered by Lima. Provides seamless macOS virtualization with Docker CLI, containerd, and Kubernetes integration, complete with port forwarding and volume mounts.
 
-- **[Lima](https://github.com/lima-vm/lima)** [![GitHub stars](https://img.shields.io/github/stars/lima-vm/lima?style=social&color=white)](https://github.com/lima-vm/lima/stargazers)  
+- **[Lima](https://github.com/lima-vm/lima)** [![GitHub_Stars](https://img.shields.io/github/stars/lima-vm/lima?style=social&color=white)](https://github.com/lima-vm/lima/stargazers)  
   🐧 **Linux virtual machines on macOS with automatic file sharing and port forwarding** (Apache-2.0)  
   The de facto macOS VM layer for cloud-native engineers, enabling containerd, nerdctl, and Docker to run smoothly on Apple Silicon and Intel Macs with native VirtioFS acceleration.
 
-- **[containerd](https://github.com/containerd/containerd)** [![GitHub stars](https://img.shields.io/github/stars/containerd/containerd?style=social&color=white)](https://github.com/containerd/containerd/stargazers)  
+- **[containerd](https://github.com/containerd/containerd)** [![GitHub_Stars](https://img.shields.io/github/stars/containerd/containerd?style=social&color=white)](https://github.com/containerd/containerd/stargazers)  
   ☸️ **The industry-standard container runtime core** (Apache-2.0, CNCF Graduated)  
   The default runtime powering GKE, EKS, AKS, and enterprise Kubernetes worldwide. Architected around decoupled shim processes that keep containers running uninterrupted even through daemon restarts. Features NRI (Node Resource Interface) 2.0 for dynamic GPU/CPU scheduling, pluggable snapshotters, Sandbox API for microVM isolation, and runwasi integration.
 
-- **[gVisor](https://github.com/google/gvisor)** [![GitHub stars](https://img.shields.io/github/stars/google/gvisor?style=social&color=white)](https://github.com/google/gvisor/stargazers)  
+- **[gVisor](https://github.com/google/gvisor)** [![GitHub_Stars](https://img.shields.io/github/stars/google/gvisor?style=social&color=white)](https://github.com/google/gvisor/stargazers)  
   🛡️ **Application kernel and syscall-interception sandbox for containers** (Apache-2.0)  
   Google's user-space kernel (Sentry) written in Go that acts as a secure boundary between untrusted containers and the Linux host kernel. Intercepts and executes syscalls in user space to eliminate kernel-level container escapes. Native Kubernetes integration via RuntimeClass (`runsc`), with zero hypervisor hardware requirements.
 
-- **[runc](https://github.com/opencontainers/runc)** [![GitHub stars](https://img.shields.io/github/stars/opencontainers/runc?style=social&color=white)](https://github.com/opencontainers/runc/stargazers)  
+- **[runc](https://github.com/opencontainers/runc)** [![GitHub_Stars](https://img.shields.io/github/stars/opencontainers/runc?style=social&color=white)](https://github.com/opencontainers/runc/stargazers)  
   ⚙️ **CLI tool for spawning and running containers according to the OCI specification** (Apache-2.0)  
   The universal, OCI-compliant low-level runtime written in Go. Directly interfaces with Linux cgroups, namespaces, and seccomp profiles. Serves as the bedrock execution engine inside containerd, CRI-O, Docker, and Podman.
 
-- **[Skopeo](https://github.com/containers/skopeo)** [![GitHub stars](https://img.shields.io/github/stars/containers/skopeo?style=social&color=white)](https://github.com/containers/skopeo/stargazers)  
+- **[Skopeo](https://github.com/containers/skopeo)** [![GitHub_Stars](https://img.shields.io/github/stars/containers/skopeo?style=social&color=white)](https://github.com/containers/skopeo/stargazers)  
   🔭 **Work with remote container images and registry repositories** (Apache-2.0)  
   Utility that inspects, copies, signs, and syncs container images across registries and local storage without requiring root privileges or running container engines.
 
-- **[WasmEdge](https://github.com/WasmEdge/WasmEdge)** [![GitHub stars](https://img.shields.io/github/stars/WasmEdge/WasmEdge?style=social&color=white)](https://github.com/WasmEdge/WasmEdge/stargazers)  
+- **[WasmEdge](https://github.com/WasmEdge/WasmEdge)** [![GitHub_Stars](https://img.shields.io/github/stars/WasmEdge/WasmEdge?style=social&color=white)](https://github.com/WasmEdge/WasmEdge/stargazers)  
   🕸️ **High-performance, lightweight WebAssembly runtime for cloud-native and edge** (Apache-2.0, CNCF Sandbox)  
   OCI-compliant Wasm runtime designed to execute side-by-side with Linux containers via `crun` and `runwasi`. Delivers sub-millisecond cold starts and tiny footprints ideal for serverless, edge AI inference, and plugin architectures.
 
-- **[nerdctl](https://github.com/containerd/nerdctl)** [![GitHub stars](https://img.shields.io/github/stars/containerd/nerdctl?style=social&color=white)](https://github.com/containerd/nerdctl/stargazers)  
+- **[nerdctl](https://github.com/containerd/nerdctl)** [![GitHub_Stars](https://img.shields.io/github/stars/containerd/nerdctl?style=social&color=white)](https://github.com/containerd/nerdctl/stargazers)  
   🤓 **Docker-compatible CLI for containerd** (Apache-2.0)  
   Full-featured CLI client for containerd with identical syntax to Docker, adding cutting-edge features: rootless mode, lazy pulling (eStargz, Nydus), OCIcrypt encryption, and IPFS image distribution.
 
-- **[Buildah](https://github.com/containers/buildah)** [![GitHub stars](https://img.shields.io/github/stars/containers/buildah?style=social&color=white)](https://github.com/containers/buildah/stargazers)  
+- **[Buildah](https://github.com/containers/buildah)** [![GitHub_Stars](https://img.shields.io/github/stars/containers/buildah?style=social&color=white)](https://github.com/containers/buildah/stargazers)  
   🏗️ **A tool that facilitates building OCI container images without a daemon** (Apache-2.0)  
   Builds standard OCI and Docker images rootlessly from scratch, standard shell scripts, or Dockerfiles without running background daemons or socket privileges.
 
-- **[Bubblewrap](https://github.com/containers/bubblewrap)** [![GitHub stars](https://img.shields.io/github/stars/containers/bubblewrap?style=social&color=white)](https://github.com/containers/bubblewrap/stargazers)  
+- **[Bubblewrap](https://github.com/containers/bubblewrap)** [![GitHub_Stars](https://img.shields.io/github/stars/containers/bubblewrap?style=social&color=white)](https://github.com/containers/bubblewrap/stargazers)  
   🫧 **Unprivileged sandboxing tool for Linux containers and desktop isolation** (LGPL-2.0)  
   Low-level setuid implementation for creating unprivileged Linux namespaces and sandboxes, used as the containerization engine powering Flatpak.
 
-- **[Kata Containers](https://github.com/kata-containers/kata-containers)** [![GitHub stars](https://img.shields.io/github/stars/kata-containers/kata-containers?style=social&color=white)](https://github.com/kata-containers/kata-containers/stargazers)  
+- **[Kata Containers](https://github.com/kata-containers/kata-containers)** [![GitHub_Stars](https://img.shields.io/github/stars/kata-containers/kata-containers?style=social&color=white)](https://github.com/kata-containers/kata-containers/stargazers)  
   🔲 **Hardware-enforced VM-level isolation for containers** (Apache-2.0, OpenInfra Foundation)  
   Spawns lightweight virtual machines (via QEMU, Cloud Hypervisor, or Firecracker) for each container or pod, guaranteeing dedicated guest kernels. Delivers true multi-tenant security, PCI-DSS/FedRAMP isolation, and Confidential Containers support (Intel TDX, AMD SEV-SNP).
 
-- **[Youki](https://github.com/containers/youki)** [![GitHub stars](https://img.shields.io/github/stars/containers/youki?style=social&color=white)](https://github.com/containers/youki/stargazers)  
+- **[Youki](https://github.com/containers/youki)** [![GitHub_Stars](https://img.shields.io/github/stars/containers/youki?style=social&color=white)](https://github.com/containers/youki/stargazers)  
   🦀 **A fast, memory-safe OCI container runtime written in Rust** (Apache-2.0)  
   Drop-in replacement for runc written in pure Rust. Achieves sub-300ms container cold starts with rigorous memory-safety guarantees, tailored for high-throughput FaaS environments and embedded Linux.
 
-- **[Cloud Hypervisor](https://github.com/cloud-hypervisor/cloud-hypervisor)** [![GitHub stars](https://img.shields.io/github/stars/cloud-hypervisor/cloud-hypervisor?style=social&color=white)](https://github.com/cloud-hypervisor/cloud-hypervisor/stargazers)  
+- **[Cloud Hypervisor](https://github.com/cloud-hypervisor/cloud-hypervisor)** [![GitHub_Stars](https://img.shields.io/github/stars/cloud-hypervisor/cloud-hypervisor?style=social&color=white)](https://github.com/cloud-hypervisor/cloud-hypervisor/stargazers)  
   ☁️ **Open source Virtual Machine Monitor (VMM) in Rust** (Apache-2.0)  
   Modern hypervisor focusing exclusively on cloud workloads and container isolation backends (backed by Intel and the Linux Foundation) built on rust-vmm components.
 
-- **[CRI-O](https://github.com/cri-o/cri-o)** [![GitHub stars](https://img.shields.io/github/stars/cri-o/cri-o?style=social&color=white)](https://github.com/cri-o/cri-o/stargazers)  
+- **[CRI-O](https://github.com/cri-o/cri-o)** [![GitHub_Stars](https://img.shields.io/github/stars/cri-o/cri-o?style=social&color=white)](https://github.com/cri-o/cri-o/stargazers)  
   🎯 **Lightweight, Kubernetes-dedicated Container Runtime Interface** (Apache-2.0, CNCF Graduated)  
   Engineered exclusively for Kubernetes CRI without legacy Docker overhead. The default runtime for Red Hat OpenShift, synchronized 1:1 with upstream Kubernetes releases. Consumes ~50 MB memory overhead per node with sub-100ms startup latencies.
 
-- **[crun](https://github.com/containers/crun)** [![GitHub stars](https://img.shields.io/github/stars/containers/crun?style=social&color=white)](https://github.com/containers/crun/stargazers)  
+- **[crun](https://github.com/containers/crun)** [![GitHub_Stars](https://img.shields.io/github/stars/containers/crun?style=social&color=white)](https://github.com/containers/crun/stargazers)  
   🏎️ **Ultra-fast, lightweight OCI runtime written in C** (GPL-2.0)  
   High-performance alternative to runc with ultra-low memory footprint (~2 MB) and instant execution. The default low-level runtime for Podman and modern CRI-O distributions, featuring built-in WebAssembly engine dispatching.
 
-- **[OCI Image Specification](https://github.com/opencontainers/image-spec)** [![GitHub stars](https://img.shields.io/github/stars/opencontainers/image-spec?style=social&color=white)](https://github.com/opencontainers/image-spec/stargazers)  
+- **[OCI Image Specification](https://github.com/opencontainers/image-spec)** [![GitHub_Stars](https://img.shields.io/github/stars/opencontainers/image-spec?style=social&color=white)](https://github.com/opencontainers/image-spec/stargazers)  
   📄 **The official OCI Image Format Specification** (Apache-2.0)  
   Defines the vendor-neutral specifications for layered container filesystem serialization, manifests, config descriptors, and cryptographic index schemas.
 
-- **[OCI Runtime Specification](https://github.com/opencontainers/runtime-spec)** [![GitHub stars](https://img.shields.io/github/stars/opencontainers/runtime-spec?style=social&color=white)](https://github.com/opencontainers/runtime-spec/stargazers)  
+- **[OCI Runtime Specification](https://github.com/opencontainers/runtime-spec)** [![GitHub_Stars](https://img.shields.io/github/stars/opencontainers/runtime-spec?style=social&color=white)](https://github.com/opencontainers/runtime-spec/stargazers)  
   📜 **The official OCI Container Runtime Specification** (Apache-2.0)  
   Standardizes container lifecycle hooks, configuration schemas (`config.json`), execution environments, and syscall restrictions across low-level engines.
 
-- **[crictl (CRI Tools)](https://github.com/kubernetes-sigs/cri-tools)** [![GitHub stars](https://img.shields.io/github/stars/kubernetes-sigs/cri-tools?style=social&color=white)](https://github.com/kubernetes-sigs/cri-tools/stargazers)  
+- **[crictl (CRI Tools)](https://github.com/kubernetes-sigs/cri-tools)** [![GitHub_Stars](https://img.shields.io/github/stars/kubernetes-sigs/cri-tools?style=social&color=white)](https://github.com/kubernetes-sigs/cri-tools/stargazers)  
   🔧 **CLI and validation test suite for Kubelet CRI runtimes** (Apache-2.0)  
   Standard debugging and operational CLI for inspecting pods, sandboxes, and images directly across CRI runtimes without going through the Kubernetes API server.
 
-- **[runwasi](https://github.com/containerd/runwasi)** [![GitHub stars](https://img.shields.io/github/stars/containerd/runwasi?style=social&color=white)](https://github.com/containerd/runwasi/stargazers)  
+- **[runwasi](https://github.com/containerd/runwasi)** [![GitHub_Stars](https://img.shields.io/github/stars/containerd/runwasi?style=social&color=white)](https://github.com/containerd/runwasi/stargazers)  
   🧩 **WebAssembly containerd shims** (Apache-2.0)  
   CNCF project providing shims for containerd to run Wasm modules natively through Wasmtime, WasmEdge, and Spin alongside Linux containers.
 
-- **[Uservm / Rootless Containers (Usernetes)](https://github.com/rootless-containers/usernetes)** [![GitHub stars](https://img.shields.io/github/stars/rootless-containers/usernetes?style=social&color=white)](https://github.com/rootless-containers/usernetes/stargazers)  
+- **[Uservm / Rootless Containers (Usernetes)](https://github.com/rootless-containers/usernetes)** [![GitHub_Stars](https://img.shields.io/github/stars/rootless-containers/usernetes?style=social&color=white)](https://github.com/rootless-containers/usernetes/stargazers)  
   🛡️ **Kubernetes multi-node cluster running entirely under unprivileged user namespaces** (Apache-2.0)  
   Proves total rootless isolation by deploying Kubernetes CRI runtimes and control planes without root privileges.
 
-- **[containers/image](https://github.com/containers/image)** [![GitHub stars](https://img.shields.io/github/stars/containers/image?style=social&color=white)](https://github.com/containers/image/stargazers)  
+- **[containers/image](https://github.com/containers/image)** [![GitHub_Stars](https://img.shields.io/github/stars/containers/image?style=social&color=white)](https://github.com/containers/image/stargazers)  
   🖼️ **Go library for transporting and converting container images** (Apache-2.0)  
   The core image pulling, verifying, and signing library powering Podman, Skopeo, and CRI-O.
 
-- **[umoci](https://github.com/opencontainers/umoci)** [![GitHub stars](https://img.shields.io/github/stars/opencontainers/umoci?style=social&color=white)](https://github.com/opencontainers/umoci/stargazers)  
+- **[umoci](https://github.com/opencontainers/umoci)** [![GitHub_Stars](https://img.shields.io/github/stars/opencontainers/umoci?style=social&color=white)](https://github.com/opencontainers/umoci/stargazers)  
   🔨 **Modifies Open Container Initiative (OCI) images as unprivileged user** (Apache-2.0)  
   Tool for unpacking, modifying, and repacking compliant OCI images without requiring root permissions.
 
-- **[Netavark](https://github.com/containers/netavark)** [![GitHub stars](https://img.shields.io/github/stars/containers/netavark?style=social&color=white)](https://github.com/containers/netavark/stargazers)  
+- **[Netavark](https://github.com/containers/netavark)** [![GitHub_Stars](https://img.shields.io/github/stars/containers/netavark?style=social&color=white)](https://github.com/containers/netavark/stargazers)  
   🌐 **Rust-based container network stack** (Apache-2.0)  
   High-performance container networking stack configuration tool and CNI replacement for Podman and rootless environments.
 
-- **[containers/storage](https://github.com/containers/storage)** [![GitHub stars](https://img.shields.io/github/stars/containers/storage?style=social&color=white)](https://github.com/containers/storage/stargazers)  
+- **[containers/storage](https://github.com/containers/storage)** [![GitHub_Stars](https://img.shields.io/github/stars/containers/storage?style=social&color=white)](https://github.com/containers/storage/stargazers)  
   💾 **Go library for managing local filesystem layers and overlay storage** (Apache-2.0)  
   Shared storage backend for layered container graph drivers (overlay2, btrfs, vfs) utilized across the Podman/CRI-O stack.
 
-- **[conmon](https://github.com/containers/conmon)** [![GitHub stars](https://img.shields.io/github/stars/containers/conmon?style=social&color=white)](https://github.com/containers/conmon/stargazers)  
+- **[conmon](https://github.com/containers/conmon)** [![GitHub_Stars](https://img.shields.io/github/stars/containers/conmon?style=social&color=white)](https://github.com/containers/conmon/stargazers)  
   👀 **OCI container monitor written in C** (Apache-2.0)  
   Lightweight monitor daemon tracking container exit statuses, TTY forwardings, and log streams for Podman and CRI-O.
 
